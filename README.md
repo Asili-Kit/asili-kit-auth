@@ -101,23 +101,6 @@ BlocProvider(
 - **Frontend**: Pin to compatible backend version in `pubspec.yaml` or docs.
 - **Migrations**: Always run `alembic upgrade head` before API startup.
 
-## Current Status
-
-✅ **Phase 1 — Safe Defaults**: Complete
-- Secure config validation ✓
-- Production/dev separation ✓  
-- Mobile-backend contract ✓
-
-✅ **Phase 2 — Integration**: Complete
-- 15-min quickstart ✓
-- API error contract ✓
-- Environment strategy ✓
-
-🔄 **Phase 3 — Production Hardening**: Planned
-- Safe defaults added
-- Backend and frontend docs now in English
-- Logout backend contract aligned with mobile module
-
 Next focus:
 - Environment-specific frontend configuration
 - Integration sample app improvements
