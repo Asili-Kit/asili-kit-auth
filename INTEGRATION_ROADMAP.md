@@ -36,24 +36,6 @@ Status: ✅ complete
 - One minimal host app integration flow.
 - Startup auth check + guarded route + logout.
 
-## Phase 3 - Production Hardening
-
-Status: planned
-
-1. Token storage hardening on mobile.
-- Use secure keystore/keychain-backed storage.
-
-2. Observability and operability.
-- Add structured logs and security event traces.
-- Add basic health/readiness documentation.
-
-3. CI quality gates.
-- Backend tests and lint checks.
-- Flutter analyze/test checks.
-
-4. Release and compatibility policy.
-- Semantic versioning and migration notes.
-
 ## Integration Acceptance Criteria
 
 1. A developer can run backend + migrations in under 10 minutes.
