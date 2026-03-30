@@ -81,4 +81,27 @@ class AuthCubit extends Cubit<AuthState> {
     await TokenStorage.clear();
     emit(AuthUnauthenticated());
   }
-}
+
+  // 🔐 REQUEST PASSWORD RESET
+  Future<void> requestPasswordReset(String email) async {
+    emit(AuthLoading());
+
+    try {
+      await authService.requestPasswordReset(email);
+      emit(PasswordResetRequested("Reset link sent to $email"));
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }
+
+  // 🔑 RESET PASSWORD
+  Future<void> resetPassword(String token, String newPassword) async {
+    emit(AuthLoading());
+
+    try {
+      await authService.resetPassword(token, newPassword);
+      emit(PasswordResetSuccess("Password reset successful. Please login."));
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }

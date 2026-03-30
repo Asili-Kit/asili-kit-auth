@@ -17,3 +17,16 @@ class AuthError extends AuthState {
 
   AuthError(this.message);
 }
+
+// Password reset states
+class PasswordResetRequested extends AuthState {
+  final String message;
+
+  PasswordResetRequested(this.message);
+}
+
+class PasswordResetSuccess extends AuthState {
+  final String message;
+
+  PasswordResetSuccess(this.message);
+}

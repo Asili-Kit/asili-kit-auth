@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/auth_cubit.dart';
 import '../cubit/auth_state.dart';
 import 'register_page.dart';
+import 'forgot_password_page.dart';
 import 'home_page_example.dart';
 
 class LoginPage extends StatefulWidget {
@@ -67,6 +68,16 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   },
                   child: const Text("Créer un compte"),
+                ),
+
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const ForgotPasswordPage()),
+                    );
+                  },
+                  child: const Text("Mot de passe oublié?"),
                 ),
 
                 if (state is AuthError)
